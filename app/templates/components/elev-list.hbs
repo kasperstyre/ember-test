@@ -1,0 +1,7 @@
+<h2>{{@title}}</h2>
+
+<ul>
+  {{#each @elev as |elev|}}
+    <li><button {{action "showElev" elev}}>{{elev}}</button></li>
+  {{/each}}
+</ul>
