@@ -1,0 +1,22 @@
+.rental-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 80%;
+}
+
+.rental-form-input {
+    padding: 11px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: solid 1px lightgray;
+    display: block;
+}
+
+.rental-form-button {
+    margin-top: 15px;
+}
+
+label {
+    font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}

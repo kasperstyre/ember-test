@@ -1,0 +1,39 @@
+<div>
+    <div class="jumbo">
+        <div class="right tomster"></div>
+        <h2>Create Rental</h2>
+        <p>Here you can add more rentals to the list!</p>
+    </div>
+    <div class="jumbo rental-form">
+        <label for="title">Title</label>
+        <Input @id="title" @value={{this.title}} class="rental-form-input" />
+
+        <label for="owner">Owner</label>
+        <Input @id="owner" @value={{this.owner}} class="rental-form-input" />
+
+        <label for="city">City</label>
+        <Input @id="city" @value={{this.city}} class="rental-form-input" />
+
+        <label for="category">Category</label>
+        <select required name="categories" onchange={{ action "selectCategory" }} class="rental-form-input">
+            <option disabled="disabled" selected="selected">Choose category</option>
+
+            {{#each categories as |category|}}
+                <option value={{category}}>{{category}}</option>
+            {{/each}}
+        </select>
+        {{!-- <Input @id="category" @value={{this.category}} class="rental-form-input" /> --}}
+
+        <label for="bedrooms">Bedrooms</label>
+        <Input @id="bedrooms" @value={{ this.bedrooms }} @keyDown={{ action "setBedrooms" }} class="rental-form-input" type="number" />
+
+        <label for="image">Image</label>
+        <Input @id="image" @value={{this.image}} class="rental-form-input" />
+
+        <label for="description">Description</label>
+        <Input @id="description" @value={{this.description}} class="rental-form-input" />
+
+        <button {{ action "createRental" }} class="button rental-form-button">Create</button>
+    </div>
+</div>
+{{outlet}}
