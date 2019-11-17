@@ -14,10 +14,6 @@ export default Controller.extend({
                     return { query: param, results: results };
                 });
             }
-        },
-
-        createRental() {
-            console.log(this.title);
         }
     }
 });
